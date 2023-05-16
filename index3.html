@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AK Phone House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <style>
+	.checked {
+  color: orange;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+        body {
+            margin: 4vh;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar {
+            width: 25%;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 15px;
+            height: 92vh;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .fa-circle {
+            color: orangered;
+        }
+        .searchBar {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+		
+        input {
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .glass:hover {
+            color: orangered;
+            cursor: pointer;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa-brands {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            cursor: pointer;
+        }
+        .fa-brands:hover {
+            color: red;
+        }
+        .data {
+            width: 73%;
+            border-radius: 3px;
+            height: 92vh;
+            overflow-y: auto;
+        }
+        .top {
+            height: 60px;
+            border-radius: 3px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .header {
+            height: 200px;
+            border-radius: 3px;
+            background-color: #333;
+            margin: 3vh 0px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header p {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .box {
+            margin: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .img-box {
+            width: 100%;
+            height: 176px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images {
+            max-height: 90%;
+            max-width: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+        }
+        h2 {
+            font-size: 20px;
+            color: blue;
+        }
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover {
+            background-color: orangered;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+		
+		a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: black;
+  color: black;
+}
+
+.next {
+  background-color:#f1f1f1 ;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidehead">
+                <div class="dots">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle" style="color: #333;"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+            </div>
+            <div class="sidebody" style="height: 69vh;">
+                <div class="searchBar">
+                    <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+                    <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+                </div>
+            </div>
+            <div class="sidefoot">
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+				<img src="file:///C:/Users/User1/Desktop/phone/Android_thumb800.jpg" width="200px">
+				<img src="file:///C:/Users/User1/Desktop/phone/samsung-galaxy-a53-5g.webp" width="200px">
+				<img src="file:///C:/Users/User1/Desktop/phone/Deals-Header-Image-Blue.webp" width="200px">
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-github"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="data">
+            <div class="top">
+                <p>suscribe</p>
+                <p>Coder AK</p>
+            </div>
+			
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+            <div class="header">
+                <p>Wellcome to android world</p>
+						
+<video width="250"  autoplay muted>
+  <source src="file:///C:/Users/User1/Downloads/document_6266940824890640418.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+            </div>
+            <div class="body">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const product = [
+            {
+                id: 0,
+                image: 'file:///C:/Users/User1/Desktop/phone/LD0006010795.jpg',
+                title: 'samsung gallaxy s23 ultra',
+                price: 956,
+            },
+            {
+                id: 1,
+                image: 'file:///C:/Users/User1/Desktop/phone/samsung-s23-256gb-verde-5g-dual-sim-8gb-europa.jpg',
+                title: 'samsung gallaxy s23',
+                price: 825,
+            },
+            {
+                id: 2,
+                image: 'file:///C:/Users/User1/Desktop/phone/817IKYomOSL._AC_SL1500_.jpg',
+                title: 'samsung gallaxy s22',
+                price: 753,
+            },
+            {
+                id: 3,
+                image: 'file:///C:/Users/User1/Desktop/phone/61bLefD79-L._AC_SX679_.jpg',
+                title: 'samsung gallaxy s21',
+                price: 682,
+            },
+            {
+                id: 4,
+                image: 'file:///C:/Users/User1/Desktop/phone/11_861ce72c-d40a-4ea2-830b-27b233620ae9_530x@2x.webp',
+                title: 'Vivo Y16',
+                price: 650,
+            },
+            {
+                id: 5,
+                image: 'file:///C:/Users/User1/Desktop/phone/OnePlus%20Nord%20CE%202%20Lite%205G-500x500.jpg',
+                title: 'OnePlus Nord CE 2 Lite 5G',
+                price: 1000,
+            },
+			
+			
+			
+			 {
+                id: 1,
+                image: 'file:///C:/Users/User1/Desktop/phone/csm_4_to_3_Teaser_Google_Pixel_7_409648f5ba.jpg',
+                title: 'Google Pixel 7',
+                price: 850,
+            },
+            {
+                id: 2,
+                image: 'file:///C:/Users/User1/Desktop/phone/0c136f0d00e4b3449d067fb6cd6ba704.jpg_720x720.jpg_.webp',
+                title: 'Poco X5 Pro',
+                price: 751,
+            },
+            {
+                id: 3,
+                image: 'file:///C:/Users/User1/Desktop/phone/samsung-galaxyzfold4-greygreen-04-900x1200.jpg',
+                title: 'Samsung Galaxy Z Fold 4',
+                price: 899,
+            },
+            {
+                id: 4,
+                image: 'file:///C:/Users/User1/Desktop/phone/Asus-Zenfone-9-460x460.jpg',
+                title: 'Asus Zenfone 9 ',
+                price: 854,
+            },
+            {
+                id: 5,
+                image: 'file:///C:/Users/User1/Desktop/phone/7547158.jpg',
+                title: 'OnePlus 11.',
+                price: 450,
+            },
+			{
+			  id: 6,
+                image: 'file:///C:/Users/User1/Desktop/phone/realmec11-500x500.jpg',
+                title: 'realme c11',
+                price: 254,
+				},
+				   
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+        document.getElementById('searchBar').addEventListener('keyup', (e) => {
+            const searchData = e.target.value.toLowerCase();
+            const filteredData = categories.filter((item) => {
+                return (
+                    item.title.toLowerCase().includes(searchData)
+                )
+            })
+            displayItem(filteredData)
+        });
+
+        const displayItem = (items) => {
+            document.getElementById('root').innerHTML = items.map((item) => {
+                var { image, title, price } = item;
+                return (
+                    `<div class='box'>
+                        <div class='img-box'>
+                            <img class='images' src=${image}></img>
+                        </div> 
+                        <div class='bottom'>
+                            <p>${title}</p>
+							
+                            <h2>$ ${price}.00</h2>
+                        <button onclick="document.location='index4.html'">Buy</button>
+                        </div>
+                    </div>`
+                )
+            }).join('')
+        };
+        displayItem(categories);
+
+    </script>
+	<br>
+	<a href="search.html" class="previous square">&#8249;</a>
+<a href="#" class="next square">&#8250;</a>
+
+  

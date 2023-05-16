@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AK Phone House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    <style>
+	.checked {
+  color: orange;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+        body {
+            margin: 4vh;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar {
+            width: 25%;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 15px;
+            height: 92vh;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .fa-circle {
+            color: orangered;
+        }
+        .searchBar {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+		
+        input {
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .glass:hover {
+            color: orangered;
+            cursor: pointer;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa-brands {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            cursor: pointer;
+        }
+        .fa-brands:hover {
+            color: red;
+        }
+        .data {
+            width: 73%;
+            border-radius: 3px;
+            height: 92vh;
+            overflow-y: auto;
+        }
+        .top {
+            height: 60px;
+            border-radius: 3px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .header {
+            height: 200px;
+            border-radius: 3px;
+            background-color: #333;
+            margin: 3vh 0px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header p {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .box {
+            margin: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .img-box {
+            width: 100%;
+            height: 176px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images {
+            max-height: 90%;
+            max-width: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+        }
+        h2 {
+            font-size: 20px;
+            color: blue;
+        }
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover {
+            background-color: orangered;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+		
+		a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: black;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidehead">
+                <div class="dots">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle" style="color: #333;"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+            </div>
+            <div class="sidebody" style="height: 69vh;">
+                <div class="searchBar">
+                    <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+                    <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+                </div>
+            </div>
+            <div class="sidefoot">
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+				<img src="file:///C:/Users/User1/Desktop/phone/mw-apple-products-bf-primary.webp" width="200px">
+				<img src="file:///C:/Users/User1/Desktop/phone/Upcoming-Apple-products-2023.jpg" width="200px">
+				<img src="file:///C:/Users/User1/Desktop/phone/Deals-Header-Image-Blue.webp" width="200px">
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-github"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="data">
+            <div class="top">
+                <p>suscribe</p>
+                <p>Coder AK</p>
+            </div>
+			
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+            <div class="header">
+                <p>Wellcome to apple Library</p>
+				
+<video width="250"  autoplay muted>
+  <source src="file:///C:/Users/User1/Downloads/document_6266940824890640404%20(1).mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+            </div>
+			
+			
+
+            <div class="body">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const product = [
+            {
+                id: 0,
+                image: 'file:///C:/Users/User1/Desktop/phone/6487388_sd.jpg',
+                title: 'ipone 14 pro',
+                price: 999,
+            },
+            {
+                id: 1,
+                image: 'file:///C:/Users/User1/Desktop/phone/Apple-iPhone-13-Pro-Max-ohne-Vertrag-1632133499965.jpg',
+                title: 'ipone 13 pro',
+                price: 830,
+            },
+            {
+                id: 2,
+                image: 'file:///C:/Users/User1/Desktop/phone/71a5+29LadL._AC_SL1500_.jpg',
+                title: 'ipone 12 pro',
+                price: 753,
+            },
+            {
+                id: 3,
+                image: 'file:///C:/Users/User1/Desktop/phone/51y+8p7pXtL._AC_SX425_.jpg',
+                title: 'ipone 11 pro',
+                price: 682,
+            },
+            {
+                id: 4,
+                image: 'file:///C:/Users/User1/Desktop/phone/63047249525dad73651f2821_iPhone%20Xs%20main%20image.png',
+                title: 'ipone Xs',
+                price: 520,
+            },
+            {
+                id: 5,
+                image: 'file:///C:/Users/User1/Desktop/phone/apple-iphone-8-plus-pakistan-priceoye-ok5ve_grande.webp',
+                title: 'iphone 8 plus',
+                price: 320,
+            },
+			
+			
+			
+			 {
+                id: 1,
+                image: 'file:///C:/Users/User1/Desktop/phone/Screenshot-2022-01-02-at-9.32.32-AM-300x300.png',
+                title: 'Air Pods Pro',
+                price: 300,
+            },
+            {
+                id: 2,
+                image: 'file:///C:/Users/User1/Desktop/phone/istockphoto-496730484-612x612.jpg',
+                title: 'Apple wach',
+                price: 230,
+            },
+            {
+                id: 3,
+                image: 'file:///C:/Users/User1/Desktop/phone/mac-air-apple-laptop-1000x1000.webp',
+                title: 'Apple Laptop',
+                price: 1000,
+            },
+            {
+                id: 4,
+                image: 'file:///C:/Users/User1/Desktop/phone/0f8a18fbc52ad88298a969407294f9f9.png',
+                title: 'ipad ',
+                price: 1500,
+            },
+            {
+                id: 5,
+                image: 'file:///C:/Users/User1/Desktop/phone/iphone-x-256gb-500x500.png',
+                title: 'ipone X',
+                price: 450,
+            },
+			{
+			  id: 6,
+                image: 'file:///C:/Users/User1/Desktop/phone/ipad-pro-2021-11inch-grey_1.webp',
+                title: 'ipad pro',
+                price: 1499,
+				},
+				   
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+        document.getElementById('searchBar').addEventListener('keyup', (e) => {
+            const searchData = e.target.value.toLowerCase();
+            const filteredData = categories.filter((item) => {
+                return (
+                    item.title.toLowerCase().includes(searchData)
+                )
+            })
+            displayItem(filteredData)
+        });
+
+        const displayItem = (items) => {
+            document.getElementById('root').innerHTML = items.map((item) => {
+                var { image, title, price } = item;
+                return (
+                    `<div class='box'>
+                        <div class='img-box'>
+                            <img class='images' src=${image}></img>
+                        </div> 
+                        <div class='bottom'>
+                            <p>${title}</p>
+							
+                            <h2>$ ${price}.00</h2>
+                        <button onclick="document.location='index4.html'">Buy</button>
+                        </div>
+                    </div>`
+                )
+            }).join('')
+        };
+        displayItem(categories);
+
+    </script>
+	
+	
+	<br>
+	<a href="#" class="previous square">&#8249;</a>
+<a href="index3.html" class="next square">&#8250;</a>
+
+  
